@@ -1,0 +1,33 @@
+@mixin media-query($screen-width) {
+	@if $screen-width == 'mobile' {
+		@media screen and (max-width: 424px) {
+			@content;
+		}
+	} @else if $screen-width == 'mobL-and-tab' {
+		@media screen and (min-width: 425px) {
+			@content;
+		}
+	} @else if $screen-width == 'tablet-land' {
+		@media screen and (min-width: 768px) {
+			@content;
+		}
+	} @else if $screen-width == 'desktop' {
+		@media screen and (min-width: 1024px) {
+			@content;
+		}
+	}
+}
+
+@mixin box-size($width, $height, $padding) {
+	width: $width;
+	height: $height;
+	padding: $padding;
+}
+
+@mixin box-shadow {
+	box-shadow: 0px 5px 20px rgba(rgb(88, 84, 84), 0.4);
+}
+
+@mixin borderRadius {
+	border-radius: 10px;
+}
